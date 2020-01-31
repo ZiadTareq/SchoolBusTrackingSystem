@@ -1,0 +1,61 @@
+<html>
+    <head>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>SBTS ADMIN</h1>
+
+        <div class="content">
+
+            <form id="add-user-form" >
+                <input type="text" name="bus_no" placeholder="bus number" required >
+                <input type="text" name="child_name" placeholder="child name" required >
+                <input type="text" name="classname" placeholder="class name" required>
+                <input type="text" name="drivername" placeholder="drivername" required>
+                <input type="text" name="email" placeholder="email" required>
+                <input type="text" name="full_name" placeholder="full name" required>
+                <input type="text" name="mobile" placeholder="mobile" required>
+                <input type="text" name="password" placeholder="password" required>
+                <input type="text" name="pic" placeholder="picture url" required>
+                <input type="text" name="round" placeholder="round" required>
+                <input type="text" name="school" placeholder="school" required>
+                <input type="text" name="username" placeholder="user name" required>
+                <button>ADD</button>
+
+
+            </form>
+
+            <ul id="users-list"></ul>
+
+        </div>
+
+
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#config-web-app -->
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCmL-nxcbdzYKDn5KGDXO8mJ5RxujKWS50",
+            authDomain: "bustracker-17b97.firebaseapp.com",
+            databaseURL: "https://bustracker-17b97.firebaseio.com",
+            projectId: "bustracker-17b97",
+            storageBucket: "bustracker-17b97.appspot.com",
+            messagingSenderId: "184727334999",
+            appId: "1:184727334999:web:0be3cab5cb9b22c5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true })
+        </script>
+
+        <script src="app.js"></script>
+    </body>
+</html>
